@@ -36,10 +36,10 @@ function promptTotalGames() {
       (playerSelection === 'scissors' && computerSelection === 'paper')
     ) {
       playerScore++;
-      return `<span class="win-text">You win!</span> ${playerSelection} beats ${computerSelection}`;
+      return `<span class="win-text">Congratulation, you win!</span> ${playerSelection} beats ${computerSelection}`;
     } else {
       computerScore++;
-      return `<span class="lose-text">You lose!</span> ${computerSelection} beats ${playerSelection}`;
+      return `<span class="lose-text">Sorry, you lose!</span> ${computerSelection} beats ${playerSelection}`;
     }
   }
 
