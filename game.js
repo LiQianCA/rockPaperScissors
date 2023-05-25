@@ -15,7 +15,7 @@ function promptTotalGames() {
     totalGames = parseInt(prompt("How many games do you want to play? (1-30)"));
   } while (isNaN(totalGames) || totalGames <= 0 || totalGames > 30);
 }
- promptTotalGames();
+
 
 // Function to generate computer's choice
   function computerPlay() {
@@ -82,12 +82,17 @@ function promptTotalGames() {
     gameFinished = true;
   }
 
+
+    // Event listener to start game and prompt for rounds to be played
+    $('.start').on("click", function() { promptTotalGames();
+    });
   
   // Event listener for choice button
-  $('.choice').click(function() {3
+  $('.choice').on("click", function() {3
     const playerSelection = $(this).data('choice');
     game(playerSelection);
   });
+
 
   // Hover effect on the click button
   $('.choice').hover(function() {
