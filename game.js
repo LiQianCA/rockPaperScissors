@@ -84,13 +84,23 @@ function promptTotalGames() {
 
   
   // Event listener for choice button
-  $('.choice').click(function() {
+  $('.choice').click(function() {3
     const playerSelection = $(this).data('choice');
     game(playerSelection);
   });
 
   // Hover effect on the click button
   $('.choice').hover(function() {
+    $(this).addClass("highlight");
+  }, function () {
+    $(this).removeClass("highlight");
+  });
+  $('.start').hover(function() {
+    $(this).addClass("highlight");
+  }, function () {
+    $(this).removeClass("highlight");
+  });
+  $('.play-again').hover(function() {
     $(this).addClass("highlight");
   }, function () {
     $(this).removeClass("highlight");
