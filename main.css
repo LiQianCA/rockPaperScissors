@@ -45,7 +45,7 @@ p {
   padding: 10px;
 }
 
-.play-again {
+.play-again, #start {
   margin-top: 20px;
   display: none;
   padding: 10px 20px;
