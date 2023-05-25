@@ -14,35 +14,38 @@
 
     <div class="pt-5 text-white text-center">
         <h1 class="pb-5">Let's play: Rock Paper Scissors</h1>
-        <h2 id="roundsResult" class="pt-5">Round 1:<span id="result"></span></h2>
+        <h2 id="roundsResult" class="pt-5">Round  <span id="result"></span></h2>
     </div>
 
     <div class="container-xl mt-5">
         <div class="row">
             <div class="col-sm-6" style="background-color: rgb(16, 104, 145);height: 500px;">
                 <h2 class="p-5 text-white">Your Choice: </h2>
-                <div id="yourChoiceDisplay" class="choices">p1</div>
-                <div class="text-center">
-                    <button type="submit" id="rock">Rock</button>
-                    <button type="submit" id="paper">Paper</button>
-                    <button type="submit" id="scissors">Scissors</button>
+                <!--<div id="yourChoiceDisplay" class="choices" style="height: 250px">p1</div>-->
+                <img id="picUserChoice" src="pics/rock.png" alt="Original Image" style="height: 180px;">
+                <div class="text-center pt-5 mt-5">
+                    <button class="button" type="submit" id="rock">Rock</button>
+                    <button class="button" type="submit" id="paper">Paper</button>
+                    <button class="button" type="submit" id="scissors">Scissors</button>
                 </div>
             </div>
             <div class="col-sm-6" style="background-color: rgb(5, 121, 121);height: 500px;">
-                <h2 class="p-5 text-white">Computer's choice: </span></h2>
-                <div id="computerChoiceDisplay" class="choices">p2</div>
+                <h2 class="p-5 text-white">Computer's choice: </h2>
+                <!--<div id="computerChoiceDisplay" class="choices">p2</div>-->
+                <img id="picComChoice" src="pics/rock.png" alt="Original Image" style="height: 180px;">
             </div>
         </div>
         <div class="row">
             <div class="col p-5 text-white text-center">
-                <h2 id="yourScore">Your Score:<span id="result"></span></h2>
+                <h2 id="yourScore">Your Score:<span id="result1">1</span></h2>
             </div>
 
             <div class="col p-5 text-white text-center">
-                <h2 id="computerScore">Computer Score:<span id="result"></span></h2>
+                <h2 id="computerScore">Computer Score:<span id="result2">2</span></h2>
             </div>
         </div>
     </div>
-    <script src="game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="rockpaperscissors.js"></script>
 </body>
 </html>
