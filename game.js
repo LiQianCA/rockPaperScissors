@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // set variables
   const choices = ['rock', 'paper', 'scissors'];
   let totalGames;
   let currentGame = 1;
@@ -8,7 +9,7 @@ $(document).ready(function() {
   let gameFinished = false;
 
 
-// Prompt the player for the number of games with validation
+// Prompt the player for the number of games and validate the input
 function promptTotalGames() {
   do {
     totalGames = parseInt(prompt("How many games do you want to play? (1-30)"));
@@ -82,20 +83,20 @@ function promptTotalGames() {
   }
 
   
-  // Event listener for button clicks
+  // Event listener for choice button
   $('.choice').click(function() {
     const playerSelection = $(this).data('choice');
     game(playerSelection);
   });
 
-  // Hover effect on the click button, change font color and font-weight to bold
+  // Hover effect on the click button
   $('.choice').hover(function() {
     $(this).addClass("highlight");
   }, function () {
     $(this).removeClass("highlight");
   });
 
-  // Event listener for play again button click
+  // Event listener for play again button
   $('.play-again').click(function() {
     $('.result').empty();
     $('.play-again').hide();
