@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Rock Paper Scissors Game</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Mystery+Quest&display=swap" rel="stylesheet">
@@ -18,19 +18,19 @@
     * The player can set how many games he/she wants to play (1-30) at the beginning <br>
     * The winner will get 1 point for each game won. The player with the highest score at the end will be the victor! 
   </p>
-  <button id="start">Start Playing!</button>
+  <button class="start">Start Playing!</button>
 
   <p>Please select your choice:</p>
-  <button class="button choice" data-choice="rock">Rock</button>
-  <button class="button choice" data-choice="paper">Paper</button>
-  <button class="button choice" data-choice="scissors">Scissors</button>
+  <button class="choice" data-choice="rock">Rock</button>
+  <button class="choice" data-choice="paper">Paper</button>
+  <button class="choice" data-choice="scissors">Scissors</button>
   <br>
   <br>
   <div class="result"></div>
-  <button class="button play-again" style="display: none;">Play Again</button>
+  <button class="play-again" style="display: none;">Play Again</button>
 
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-  <script src="game.js"></script>
+  <script src="scripts/game.js"></script>
 
  
 </body>
