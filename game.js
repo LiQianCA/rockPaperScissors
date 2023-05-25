@@ -24,9 +24,7 @@ function promptTotalGames() {
 
   // Function to determine the winner
   function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
-    computerSelection = computerSelection.toLowerCase();
-
+    
     if (playerSelection === computerSelection) {
       tieScore++;
       return "It's a tie!";
@@ -88,6 +86,13 @@ function promptTotalGames() {
   $('.choice').click(function() {
     const playerSelection = $(this).data('choice');
     game(playerSelection);
+  });
+
+  // Hover effect on the click button, change font color and font-weight to bold
+  $('.choice').hover(function() {
+    $(this).addClass("highlight");
+  }, function () {
+    $(this).removeClass("highlight");
   });
 
   // Event listener for play again button click
