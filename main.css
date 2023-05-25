@@ -33,14 +33,14 @@ p {
   cursor: pointer;
   background-color: bisque;
 }
-
+*/
 .choice.highlight {
   font-weight: bold;
   color:coral;
   border-radius: 20%;
   background-color: aqua;
 }
-*/
+
 .result {
   margin-top: 20px;
   font-weight: bold;
@@ -56,6 +56,24 @@ p {
   border: none;
   cursor: pointer;
   background-color: coral;
+  }
+
+.start {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: coral;
+  }
+
+  .start.highlight, .play-again.highlight {
+    font-weight: bold;
+    color:aqua;
+    border-radius: 20%;
+    background-color: #F55050;
   }
 
 #effect {
