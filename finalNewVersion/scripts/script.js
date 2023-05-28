@@ -3,7 +3,7 @@
      let totalGames = 1;
      let gameType; // gametype can be 1 , 2, or 3 amount of rounds to be played
      let bankRoll = 100, rounds = 0, userScord = 0, computerScord = 0; // userScord and computerScord are the number of rounds won within a game
-     let userGameScore = 0, computerGameScore = 0; // ...Game score number of games won
+     let userGameScore = 0, computerGameScore = 0; // ...GameScore number of games won
      let userTotalRoundScore = 0, computerTotalRoundScore = 0; //Total round score is number of rounds won between all games
      let btnRock = document.getElementById("rock");
      let btnPaper = document.getElementById("paper");
@@ -138,23 +138,24 @@
       let selectedOption = $('input[name=options]:checked').val();
 
       if (selectedOption === 'option1'){
-        bankRoll += (betAmount.toFixed(2) * 2);
+        bankRoll += (betAmount * 2);
       }else if (selectedOption === 'option2'){
-        bankRoll += (betAmount.toFixed(2) * 7);
+        bankRoll += (betAmount * 7);
       }else if(selectedOption === 'option3'){
         mysteryPrize();
       }
-      bankRoll.toFixed(2);
       $('#betAmount').val("");
     } else if (winOrLoss === "lose"){
       computerGameScore++;
       $("#resultsCGames").html(computerGameScore);
-      bankRoll -= betAmount.toFixed(2);
+      bankRoll -= (betAmount);
       $('#betAmount').val("");
     }
+    bankRoll = parseFloat(bankRoll.toFixed(2)); // cut off extra decimals if present
     userScord = 0;
     computerScord = 0;
     $('#bankRoll').text(`Bankroll = $${bankRoll}`);
+    $('#playerBox').css('opacity', '50%');
     $('#rock').prop('disabled', true);
     $('#paper').prop('disabled', true);
     $('#scissors').prop('disabled', true);
@@ -162,6 +163,10 @@
     $('#betAmount').prop('disabled', false);
     $('input[type="radio"]').prop('disabled', false);
     $('#roundForm').css('background-color', '#298AC4')
+    $('#roundForm').css('border', '2px solid red')
+    $('#betAmount').css('border', '2px solid red')
+    $('#startGame').css('border', '2px solid red')
+
   }
 
 
@@ -203,6 +208,7 @@ $('#startGame').on('click', function() {
     return;
   }
   else {
+  $('#playerBox').css('opacity', '100%');
   $('#rock').prop('disabled', false);
   $('#paper').prop('disabled', false);
   $('#scissors').prop('disabled', false);
@@ -210,6 +216,9 @@ $('#startGame').on('click', function() {
   $('#betAmount').prop('disabled', true);
   $('input[type="radio"]').prop('disabled', true);
   $('#roundForm').css('background-color', '#5A5A5A')
+  $('#roundForm').css('border', 'none')
+  $('#betAmount').css('border', 'none')
+  $('#startGame').css('border', 'none')
   }
 });
 
@@ -241,6 +250,9 @@ $('.start').hide();
 $('.instructions').hide();
 $('h1').text("Let's Play Rock Paper Scissors Risk!");
 $(".rps").show();
+$('#roundForm').css('border', '2px solid red')
+$('#betAmount').css('border', '2px solid red')
+$('#startGame').css('border', '2px solid red')
 if ($("#gameAvatar").attr("src") === "blank"){ // see if the player has chosen an opponent
   let anonPara = $('<p>Anonymous Opponent</p>');
   $("#gameAvatar").replaceWith(anonPara);
