@@ -106,6 +106,17 @@ p {
   align-items: center;
 }
 
+#playerBox {
+  background-color: rgb(15, 104, 145);
+  height: 500px;
+  opacity: 50%;
+}
+
+#computerBox {
+  background-color: rgb(5, 121, 121);
+  height: 500px;
+}
+
 .button {
   font-family: 'Bubblegum Sans', cursive;
   display: inline-block;
@@ -153,6 +164,10 @@ p {
 
 #btnleft{
   text-align: left;
+}
+
+#roundForm {
+  background-color: rgb(14, 138, 196);
 }
 
 #roundForm label {
